@@ -1,0 +1,1 @@
+Url= "https://www.neduet.edu.pk/"

@@ -1,4 +1,5 @@
-from core.scraper import WebsiteScraper
+from data.scraper import WebsiteScraper
+from config import Url
 
 def test_my_scraper():
     print("\n--- SCRAPER TOOL TEST START ---")
@@ -7,7 +8,7 @@ def test_my_scraper():
     scraper = WebsiteScraper()
     
     # 2. Fetch the website data
-    url = "https://www.neduet.edu.pk/"
+    url = Url 
     chunks = scraper.get_website_data(url)
     
     # 3. Check the output
