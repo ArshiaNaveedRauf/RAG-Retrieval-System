@@ -8,7 +8,7 @@ def test_embedder():
               Document( page_content="Students and researchers work together on different projects.", metadata={"source": "fake-website"} ) ]
 
     embedder= DataEmbedder()
-    embeddings= embedder.embedding_generator(chunks)
+    embeddings= embedder.embedding_visualizer(chunks)
 
     assert isinstance(embeddings, np.ndarray)
 
