@@ -4,3 +4,4 @@ chroma_db/
 .venv/
 venv/
 .env
+models/all-MiniLM-L6-v2

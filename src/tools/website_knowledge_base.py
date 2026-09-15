@@ -14,7 +14,7 @@ class QueryRetrival:
     def search_vector_db(self,db,query,top_k):
         embedded_query = self.query_embedder(query)
         retrieved_docs= db.query(
-            query_embeddings=[embedded_query.tolist()],
+            query_embeddings=[embedded_query],
             n_results=top_k
         )
         return retrieved_docs
@@ -28,6 +28,7 @@ def website_knowledge_base(query):
     collection = pipeline.run_ingestion_pipeline()
     results= retrieval.search_vector_db(db= collection,query=query,top_k=Top_k)
     documents= results["documents"][0]
+    print ( "\n\n".join(documents))
     return "\n\n".join(documents)
 
 # for testing
