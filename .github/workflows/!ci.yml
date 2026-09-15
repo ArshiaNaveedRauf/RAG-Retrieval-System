@@ -8,6 +8,8 @@ jobs:
   build-and-test:
     name: build and test application
     runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
 
     steps:
       - name: checkout code
