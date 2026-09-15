@@ -10,7 +10,7 @@ def test_embedder():
     embedder= DataEmbedder()
     embeddings= embedder.embedding_visualizer(chunks)
 
-    assert isinstance(embeddings, np.ndarray)
+    assert isinstance(embeddings, list)
 
 
 
